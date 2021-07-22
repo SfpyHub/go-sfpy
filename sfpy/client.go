@@ -3,6 +3,7 @@ package sfpy
 import (
 	"crypto/sha512"
 	"encoding/json"
+	"fmt"
 
 	"github.com/sfpyhub/go-sfpy/errors"
 	"github.com/sfpyhub/go-sfpy/responses"
@@ -18,6 +19,10 @@ func NewClient(apikey, sharedsecret string) *Client {
 		sharedSecret: sharedsecret,
 		Endpoints:    newEndpoints(apikey, API_BASE_URL),
 	}
+}
+
+func (c *Client) ConstructLink(orderId string) string {
+	return fmt.Sprintf("%s/#/pay?payment=%s", APP_BASE_URL, orderId)
 }
 
 func (c *Client) ValidateSignature(signature string, data interface{}) error {

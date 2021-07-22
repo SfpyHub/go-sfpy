@@ -6,7 +6,7 @@ import (
 	"github.com/sfpyhub/go-sfpy/types"
 )
 
-type Request struct {
+type Order struct {
 	Token         string         `json:"token"`
 	ClientID      string         `json:"merchant"`
 	Address       string         `json:"address"`
@@ -19,4 +19,4 @@ type Request struct {
 	UpdatedAt     time.Time      `json:"updated_at"`
 }
 
-type RequestSlice []*Request
+type OrderSlice []*Order
