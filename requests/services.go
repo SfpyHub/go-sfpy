@@ -1,0 +1,36 @@
+package requests
+
+const (
+	// MERCHANTSERVICE ...
+	MERCHANTSERVICE string = "merchant_service"
+
+	// ORDERSERVICE ...
+	ORDERSERVICE string = "order_service"
+
+	// FETCHSERVICE ...
+	FETCHSERVICE string = "fetch_service"
+
+	// PAYMENTSERVICE ...
+	PAYMENTSERVICE string = "payment_service"
+
+	// REFUNDSERVICE ...
+	REFUNDSERVICE string = "refund_service"
+
+	// SECURITYSERVICE ...
+	SECURITYSERVICE string = "security_service"
+
+	// PASSWORDSERVICE ...
+	PASSWORDSERVICE string = "password_service"
+
+	// MERCHANTSERVICE ...
+	NOTIFY_MERCHANTSERVICE string = "merchant_service"
+
+	// SUBSCRIPTIONSERVICE ...
+	NOTIFY_SUBSCRIPTIONSERVICE string = "subscription_service"
+
+	// NOTIFICATIONSERVICE ...
+	NOTIFY_NOTIFICATIONSERVICE string = "notification_service"
+
+	// FETCHSERVICE ...
+	NOTIFY_FETCHSERVICE string = "fetch_service"
+)
