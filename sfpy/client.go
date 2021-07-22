@@ -10,13 +10,13 @@ import (
 
 type Client struct {
 	sharedSecret string
-	endpoints    SFPY
+	Endpoints    SFPY
 }
 
 func NewClient(apikey, sharedsecret string) *Client {
 	return &Client{
 		sharedSecret: sharedsecret,
-		endpoints:    newEndpoints(apikey, API_BASE_URL),
+		Endpoints:    newEndpoints(apikey, API_BASE_URL),
 	}
 }
 
