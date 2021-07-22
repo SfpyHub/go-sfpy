@@ -1,7 +1,6 @@
 package sfpy
 
-// const API_BASE_URL = "https://api.sfpy.co"
-const API_BASE_URL = "http://localhost:4321"
+const API_BASE_URL = "https://api.sfpy.co"
 const APP_BASE_URL = "https://app.sfpy.co"
 
 const (
