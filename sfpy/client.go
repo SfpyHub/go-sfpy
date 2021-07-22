@@ -20,7 +20,15 @@ func NewClient(apikey, sharedsecret string) *Client {
 	}
 }
 
-func (c *Client) ValidateSignature(signature string, event *responses.Event) error {
+func (c *Client) ValidateSignature(signature string, data interface{}) error {
+	event, ok := data.(*responses.Event)
+	if !ok {
+		return &errors.Error{
+			Category: errors.BADREQUEST,
+			Message:  "invalid data type. expecting *Event",
+		}
+	}
+
 	payload, err := json.Marshal(event)
 	if err != nil {
 		return &errors.Error{
