@@ -3,7 +3,7 @@ package responses
 import (
 	"time"
 
-	"api/types"
+	"github.com/sfpyhub/go-sfpy/types"
 )
 
 type Request struct {
