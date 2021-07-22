@@ -10,7 +10,7 @@ import (
 
 type Client struct {
 	sharedSecret string
-	endpoints    *endpoints
+	endpoints    SFPY
 }
 
 func NewClient(apikey, sharedsecret string) *Client {
