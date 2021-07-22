@@ -63,7 +63,7 @@ func newEndpoints(apikey, url string) *endpoints {
 	}
 }
 
-func (e *endpoints) FetchApiKey(ctx context.Context, request interface{}) (interface{}, error) {
+func (e *endpoints) FetchApiKey(ctx context.Context, request interface{}) (*responses.Response, error) {
 	res, err := e.fetchapikey(ctx, request)
 	if err != nil {
 		return nil, err
@@ -72,7 +72,7 @@ func (e *endpoints) FetchApiKey(ctx context.Context, request interface{}) (inter
 	return e.parseResponse(res)
 }
 
-func (e *endpoints) UpdateApiKey(ctx context.Context, request interface{}) (interface{}, error) {
+func (e *endpoints) UpdateApiKey(ctx context.Context, request interface{}) (*responses.Response, error) {
 	res, err := e.updateapikey(ctx, request)
 	if err != nil {
 		return nil, err
@@ -81,7 +81,7 @@ func (e *endpoints) UpdateApiKey(ctx context.Context, request interface{}) (inte
 	return e.parseResponse(res)
 }
 
-func (e *endpoints) AddMerchant(ctx context.Context, request interface{}) (interface{}, error) {
+func (e *endpoints) AddMerchant(ctx context.Context, request interface{}) (*responses.Response, error) {
 	res, err := e.addmerchant(ctx, request)
 	if err != nil {
 		return nil, err
@@ -90,7 +90,7 @@ func (e *endpoints) AddMerchant(ctx context.Context, request interface{}) (inter
 	return e.parseResponse(res)
 }
 
-func (e *endpoints) UpdateMerchant(ctx context.Context, request interface{}) (interface{}, error) {
+func (e *endpoints) UpdateMerchant(ctx context.Context, request interface{}) (*responses.Response, error) {
 	res, err := e.updatemerchant(ctx, request)
 	if err != nil {
 		return nil, err
@@ -99,7 +99,7 @@ func (e *endpoints) UpdateMerchant(ctx context.Context, request interface{}) (in
 	return e.parseResponse(res)
 }
 
-func (e *endpoints) FetchMerchant(ctx context.Context, request interface{}) (interface{}, error) {
+func (e *endpoints) FetchMerchant(ctx context.Context, request interface{}) (*responses.Response, error) {
 	res, err := e.fetchmerchant(ctx, request)
 	if err != nil {
 		return nil, err
@@ -108,7 +108,7 @@ func (e *endpoints) FetchMerchant(ctx context.Context, request interface{}) (int
 	return e.parseResponse(res)
 }
 
-func (e *endpoints) FetchEvents(ctx context.Context, request interface{}) (interface{}, error) {
+func (e *endpoints) FetchEvents(ctx context.Context, request interface{}) (*responses.Response, error) {
 	res, err := e.fetchevents(ctx, request)
 	if err != nil {
 		return nil, err
@@ -117,7 +117,7 @@ func (e *endpoints) FetchEvents(ctx context.Context, request interface{}) (inter
 	return e.parseResponse(res)
 }
 
-func (e *endpoints) WebhooksExist(ctx context.Context, request interface{}) (interface{}, error) {
+func (e *endpoints) WebhooksExist(ctx context.Context, request interface{}) (*responses.Response, error) {
 	res, err := e.existswebhooks(ctx, request)
 	if err != nil {
 		return nil, err
@@ -126,7 +126,7 @@ func (e *endpoints) WebhooksExist(ctx context.Context, request interface{}) (int
 	return e.parseResponse(res)
 }
 
-func (e *endpoints) EnableWebhooks(ctx context.Context, request interface{}) (interface{}, error) {
+func (e *endpoints) EnableWebhooks(ctx context.Context, request interface{}) (*responses.Response, error) {
 	res, err := e.enablewebhooks(ctx, request)
 	if err != nil {
 		return nil, err
@@ -135,7 +135,7 @@ func (e *endpoints) EnableWebhooks(ctx context.Context, request interface{}) (in
 	return e.parseResponse(res)
 }
 
-func (e *endpoints) FetchSecret(ctx context.Context, request interface{}) (interface{}, error) {
+func (e *endpoints) FetchSecret(ctx context.Context, request interface{}) (*responses.Response, error) {
 	res, err := e.fetchsecret(ctx, request)
 	if err != nil {
 		return nil, err
@@ -144,7 +144,7 @@ func (e *endpoints) FetchSecret(ctx context.Context, request interface{}) (inter
 	return e.parseResponse(res)
 }
 
-func (e *endpoints) UpdateSecret(ctx context.Context, request interface{}) (interface{}, error) {
+func (e *endpoints) UpdateSecret(ctx context.Context, request interface{}) (*responses.Response, error) {
 	res, err := e.updatesecret(ctx, request)
 	if err != nil {
 		return nil, err
@@ -153,7 +153,7 @@ func (e *endpoints) UpdateSecret(ctx context.Context, request interface{}) (inte
 	return e.parseResponse(res)
 }
 
-func (e *endpoints) DeleteEndpoint(ctx context.Context, request interface{}) (interface{}, error) {
+func (e *endpoints) DeleteEndpoint(ctx context.Context, request interface{}) (*responses.Response, error) {
 	res, err := e.deleteendpoint(ctx, request)
 	if err != nil {
 		return nil, err
@@ -162,7 +162,7 @@ func (e *endpoints) DeleteEndpoint(ctx context.Context, request interface{}) (in
 	return e.parseResponse(res)
 }
 
-func (e *endpoints) UpdateEndpoint(ctx context.Context, request interface{}) (interface{}, error) {
+func (e *endpoints) UpdateEndpoint(ctx context.Context, request interface{}) (*responses.Response, error) {
 	res, err := e.updateendpoint(ctx, request)
 	if err != nil {
 		return nil, err
@@ -171,7 +171,7 @@ func (e *endpoints) UpdateEndpoint(ctx context.Context, request interface{}) (in
 	return e.parseResponse(res)
 }
 
-func (e *endpoints) AddEndpoint(ctx context.Context, request interface{}) (interface{}, error) {
+func (e *endpoints) AddEndpoint(ctx context.Context, request interface{}) (*responses.Response, error) {
 	res, err := e.addendpoint(ctx, request)
 	if err != nil {
 		return nil, err
@@ -180,7 +180,7 @@ func (e *endpoints) AddEndpoint(ctx context.Context, request interface{}) (inter
 	return e.parseResponse(res)
 }
 
-func (e *endpoints) FetchEndpoints(ctx context.Context, request interface{}) (interface{}, error) {
+func (e *endpoints) FetchEndpoints(ctx context.Context, request interface{}) (*responses.Response, error) {
 	res, err := e.fetchendpoints(ctx, request)
 	if err != nil {
 		return nil, err
@@ -189,7 +189,7 @@ func (e *endpoints) FetchEndpoints(ctx context.Context, request interface{}) (in
 	return e.parseResponse(res)
 }
 
-func (e *endpoints) Subscribe(ctx context.Context, request interface{}) (interface{}, error) {
+func (e *endpoints) Subscribe(ctx context.Context, request interface{}) (*responses.Response, error) {
 	res, err := e.subscribe(ctx, request)
 	if err != nil {
 		return nil, err
@@ -198,7 +198,7 @@ func (e *endpoints) Subscribe(ctx context.Context, request interface{}) (interfa
 	return e.parseResponse(res)
 }
 
-func (e *endpoints) TestNotification(ctx context.Context, request interface{}) (interface{}, error) {
+func (e *endpoints) TestNotification(ctx context.Context, request interface{}) (*responses.Response, error) {
 	res, err := e.testnotification(ctx, request)
 	if err != nil {
 		return nil, err
@@ -207,7 +207,7 @@ func (e *endpoints) TestNotification(ctx context.Context, request interface{}) (
 	return e.parseResponse(res)
 }
 
-func (e *endpoints) FetchNotifications(ctx context.Context, request interface{}) (interface{}, error) {
+func (e *endpoints) FetchNotifications(ctx context.Context, request interface{}) (*responses.Response, error) {
 	res, err := e.fetchnotifications(ctx, request)
 	if err != nil {
 		return nil, err
@@ -216,7 +216,7 @@ func (e *endpoints) FetchNotifications(ctx context.Context, request interface{})
 	return e.parseResponse(res)
 }
 
-func (e *endpoints) AddOrderLink(ctx context.Context, request interface{}) (interface{}, error) {
+func (e *endpoints) AddOrderLink(ctx context.Context, request interface{}) (*responses.Response, error) {
 	res, err := e.addorderlink(ctx, request)
 	if err != nil {
 		return nil, err
@@ -225,7 +225,7 @@ func (e *endpoints) AddOrderLink(ctx context.Context, request interface{}) (inte
 	return e.parseResponse(res)
 }
 
-func (e *endpoints) AddOrder(ctx context.Context, request interface{}) (interface{}, error) {
+func (e *endpoints) AddOrder(ctx context.Context, request interface{}) (*responses.Response, error) {
 	res, err := e.addorder(ctx, request)
 	if err != nil {
 		return nil, err
@@ -234,7 +234,7 @@ func (e *endpoints) AddOrder(ctx context.Context, request interface{}) (interfac
 	return e.parseResponse(res)
 }
 
-func (e *endpoints) FetchOrders(ctx context.Context, request interface{}) (interface{}, error) {
+func (e *endpoints) FetchOrders(ctx context.Context, request interface{}) (*responses.Response, error) {
 	res, err := e.fetchorders(ctx, request)
 	if err != nil {
 		return nil, err
@@ -243,7 +243,7 @@ func (e *endpoints) FetchOrders(ctx context.Context, request interface{}) (inter
 	return e.parseResponse(res)
 }
 
-func (e *endpoints) FetchPayments(ctx context.Context, request interface{}) (interface{}, error) {
+func (e *endpoints) FetchPayments(ctx context.Context, request interface{}) (*responses.Response, error) {
 	res, err := e.fetchpayments(ctx, request)
 	if err != nil {
 		return nil, err
@@ -252,7 +252,7 @@ func (e *endpoints) FetchPayments(ctx context.Context, request interface{}) (int
 	return e.parseResponse(res)
 }
 
-func (e *endpoints) FetchRefunds(ctx context.Context, request interface{}) (interface{}, error) {
+func (e *endpoints) FetchRefunds(ctx context.Context, request interface{}) (*responses.Response, error) {
 	res, err := e.fetchrefunds(ctx, request)
 	if err != nil {
 		return nil, err
@@ -261,7 +261,7 @@ func (e *endpoints) FetchRefunds(ctx context.Context, request interface{}) (inte
 	return e.parseResponse(res)
 }
 
-func (e *endpoints) AddEmailPassword(ctx context.Context, request interface{}) (interface{}, error) {
+func (e *endpoints) AddEmailPassword(ctx context.Context, request interface{}) (*responses.Response, error) {
 	res, err := e.addemailpswd(ctx, request)
 	if err != nil {
 		return nil, err
@@ -270,8 +270,8 @@ func (e *endpoints) AddEmailPassword(ctx context.Context, request interface{}) (
 	return e.parseResponse(res)
 }
 
-func (e *endpoints) parseResponse(res interface{}) (interface{}, error) {
-	response, ok := res.(responses.Response)
+func (e *endpoints) parseResponse(res interface{}) (*responses.Response, error) {
+	response, ok := res.(*responses.Response)
 	if !ok {
 		return nil, &errors.Error{
 			Category: errors.APIERROR,

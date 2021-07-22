@@ -14,5 +14,5 @@ func decodeResponse(c context.Context, r *http.Response) (interface{}, error) {
 		return nil, err
 	}
 	response.HTTPStatus = r.StatusCode
-	return response, nil
+	return &response, nil
 }

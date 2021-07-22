@@ -1,29 +1,33 @@
 package sfpy
 
-import "context"
+import (
+	"context"
+
+	"github.com/sfpyhub/go-sfpy/responses"
+)
 
 type SFPY interface {
-	FetchApiKey(ctx context.Context, request interface{}) (interface{}, error)
-	UpdateApiKey(ctx context.Context, request interface{}) (interface{}, error)
-	AddMerchant(ctx context.Context, request interface{}) (interface{}, error)
-	UpdateMerchant(ctx context.Context, request interface{}) (interface{}, error)
-	FetchMerchant(ctx context.Context, request interface{}) (interface{}, error)
-	FetchEvents(ctx context.Context, request interface{}) (interface{}, error)
-	WebhooksExist(ctx context.Context, request interface{}) (interface{}, error)
-	EnableWebhooks(ctx context.Context, request interface{}) (interface{}, error)
-	FetchSecret(ctx context.Context, request interface{}) (interface{}, error)
-	UpdateSecret(ctx context.Context, request interface{}) (interface{}, error)
-	DeleteEndpoint(ctx context.Context, request interface{}) (interface{}, error)
-	UpdateEndpoint(ctx context.Context, request interface{}) (interface{}, error)
-	AddEndpoint(ctx context.Context, request interface{}) (interface{}, error)
-	FetchEndpoints(ctx context.Context, request interface{}) (interface{}, error)
-	Subscribe(ctx context.Context, request interface{}) (interface{}, error)
-	TestNotification(ctx context.Context, request interface{}) (interface{}, error)
-	FetchNotifications(ctx context.Context, request interface{}) (interface{}, error)
-	AddOrderLink(ctx context.Context, request interface{}) (interface{}, error)
-	AddOrder(ctx context.Context, request interface{}) (interface{}, error)
-	FetchOrders(ctx context.Context, request interface{}) (interface{}, error)
-	FetchPayments(ctx context.Context, request interface{}) (interface{}, error)
-	FetchRefunds(ctx context.Context, request interface{}) (interface{}, error)
-	AddEmailPassword(ctx context.Context, request interface{}) (interface{}, error)
+	FetchApiKey(ctx context.Context, request interface{}) (*responses.Response, error)
+	UpdateApiKey(ctx context.Context, request interface{}) (*responses.Response, error)
+	AddMerchant(ctx context.Context, request interface{}) (*responses.Response, error)
+	UpdateMerchant(ctx context.Context, request interface{}) (*responses.Response, error)
+	FetchMerchant(ctx context.Context, request interface{}) (*responses.Response, error)
+	FetchEvents(ctx context.Context, request interface{}) (*responses.Response, error)
+	WebhooksExist(ctx context.Context, request interface{}) (*responses.Response, error)
+	EnableWebhooks(ctx context.Context, request interface{}) (*responses.Response, error)
+	FetchSecret(ctx context.Context, request interface{}) (*responses.Response, error)
+	UpdateSecret(ctx context.Context, request interface{}) (*responses.Response, error)
+	DeleteEndpoint(ctx context.Context, request interface{}) (*responses.Response, error)
+	UpdateEndpoint(ctx context.Context, request interface{}) (*responses.Response, error)
+	AddEndpoint(ctx context.Context, request interface{}) (*responses.Response, error)
+	FetchEndpoints(ctx context.Context, request interface{}) (*responses.Response, error)
+	Subscribe(ctx context.Context, request interface{}) (*responses.Response, error)
+	TestNotification(ctx context.Context, request interface{}) (*responses.Response, error)
+	FetchNotifications(ctx context.Context, request interface{}) (*responses.Response, error)
+	AddOrderLink(ctx context.Context, request interface{}) (*responses.Response, error)
+	AddOrder(ctx context.Context, request interface{}) (*responses.Response, error)
+	FetchOrders(ctx context.Context, request interface{}) (*responses.Response, error)
+	FetchPayments(ctx context.Context, request interface{}) (*responses.Response, error)
+	FetchRefunds(ctx context.Context, request interface{}) (*responses.Response, error)
+	AddEmailPassword(ctx context.Context, request interface{}) (*responses.Response, error)
 }

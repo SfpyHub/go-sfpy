@@ -1,12 +1,16 @@
 package responses
 
-import "github.com/sfpyhub/go-sfpy/errors"
+import (
+	"encoding/json"
+
+	"github.com/sfpyhub/go-sfpy/errors"
+)
 
 type Response struct {
-	HTTPStatus int           `json:"-"`
-	Data       interface{}   `json:"data,omitempty"`
-	Metadata   *Metadata     `json:"metadata,omitempty"`
-	Error      *errors.Error `json:"error,omitempty"`
+	HTTPStatus int             `json:"-"`
+	Data       json.RawMessage `json:"data,omitempty"`
+	Metadata   *Metadata       `json:"metadata,omitempty"`
+	Error      *errors.Error   `json:"error,omitempty"`
 }
 
 // GetErrors returns the error
