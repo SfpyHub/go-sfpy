@@ -2,14 +2,11 @@ package sfpy
 
 import (
 	"crypto/hmac"
-	"crypto/sha512"
 	"encoding/hex"
-	"encoding/json"
 	"fmt"
 	"hash"
 
 	"github.com/sfpyhub/go-sfpy/errors"
-	"github.com/sfpyhub/go-sfpy/responses"
 )
 
 // genMAC generates the HMAC signature for a message provided the secret key
@@ -44,26 +41,4 @@ func messageMAC(signature string) ([]byte, error) {
 		}
 	}
 	return buf, nil
-}
-
-func ValidateSignature(signature string, event *responses.Event, secretToken []byte) error {
-	payload, err := json.Marshal(event)
-	if err != nil {
-		return &errors.Error{
-			Category: errors.DECODINGERROR,
-			Message:  err.Error(),
-		}
-	}
-
-	messageMAC, err := messageMAC(signature)
-	if err != nil {
-		return err
-	}
-	if !checkMAC(payload, messageMAC, secretToken, sha512.New) {
-		return &errors.Error{
-			Category: errors.AUTHENTICATIONERROR,
-			Message:  "payload signature check failed",
-		}
-	}
-	return nil
 }
