@@ -1,3 +1,5 @@
+[![GoDoc](http://img.shields.io/badge/godoc-reference-blue.svg)](http://godoc.org/github.com/sfpyhub/go-sfpy)
+
 ## Go SFPY
 
 The official [SFPY](https://sfpy.co) Go client library.
